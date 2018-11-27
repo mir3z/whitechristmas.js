@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image</title>
+    <style>
+        #cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="cover"></div>
+    <script>
+        const cover = document.querySelector("#cover");
+        const match = document.location.href.match(/src=(.*)$/);
+        if (match && match[1]) {
+            cover.style.backgroundImage = "url(" + match[1] + ")";
+        }
+    </script>
+</body>
+</html>

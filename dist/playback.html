@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Playback</title>
+</head>
+<body>
+    <audio src="" autoplay controls/>
+    <script>
+        const audio = document.querySelector("audio");
+        const match = document.location.href.match(/src=(.*)$/);
+        if (match && match[1]) {
+            audio.src = match[1];
+            audio.play();
+        }
+    </script>
+</body>
+</html>
